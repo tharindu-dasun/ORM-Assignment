@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc7df363-3a5a-4f51-b9e6-2dfeb7f475b9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lk/ijse/gdse/dto/ReservationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lk/ijse/gdse/dto/RoomsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lk/ijse/gdse/dto/StudentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lk/ijse/gdse/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lk/ijse/gdse/entity/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lk/ijse/gdse/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/gdse/entity/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +38,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/ijse lectures/ORM/Course Work/Hostel",
+    "last_opened_file_path": "D:/Ijse Second/ORM-Assignment/src/lk/ijse/gdse",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -44,10 +55,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Ijse Second\ORM-Assignment\src\lk\ijse\gdse" />
+      <recent name="D:\Ijse Second\ORM-Assignment\src\lk\ijse\gdse\entity" />
       <recent name="D:\Ijse Second\ORM-Assignment\out\production\ORM\lk\ijse\gdse\entity" />
       <recent name="D:\Ijse Second\ORM\src\assest" />
       <recent name="D:\Ijse Second\ORM\src\lk\ijse\gdse\lib\" />
-      <recent name="D:\Ijse Second\ORM\src\lk\ijse\gdse\lib" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lk.ijse.gdse.entity" />
     </key>
   </component>
   <component name="RunManager">
@@ -85,7 +100,7 @@
       <workItem from="1681100107364" duration="1886000" />
       <workItem from="1681281803537" duration="1505000" />
       <workItem from="1681398125182" duration="2875000" />
-      <workItem from="1681451568741" duration="1874000" />
+      <workItem from="1681451568741" duration="5620000" />
     </task>
     <servers />
   </component>

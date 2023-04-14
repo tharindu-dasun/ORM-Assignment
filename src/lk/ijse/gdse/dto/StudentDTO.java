@@ -1,25 +1,21 @@
-package lk.ijse.gdse.entity;
+package lk.ijse.gdse.dto;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Date;
-
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
 @Data
 @AllArgsConstructor
-@Entity
-public class Student {
-    @Id
+public class StudentDTO {
     private String student_id;
     private String name;
     private String address;
     private String contact_no;
     private Date dob;
     private String gender;
-    
+
+
 }
