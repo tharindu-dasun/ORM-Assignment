@@ -24,6 +24,14 @@ public class ManageStudentController {
     public TableColumn colContactNo;
     public TableColumn colDob;
     public TableColumn colGender;
+    public JFXTextField txtType;
+    public JFXTextField txtKeyMoney;
+    public JFXTextField txtRoomQty;
+    public JFXTextField txtRoomId;
+    public TableColumn colRoomId;
+    public TableColumn colType;
+    public TableColumn colKeyMoney;
+    public TableColumn colRoomQty;
 
     public void SearchStudentOnAction(ActionEvent actionEvent) {
     }
