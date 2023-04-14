@@ -90,14 +90,14 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TableView layoutX="25.0" layoutY="361.0" prefHeight="225.0" prefWidth="653.0">
+      <TableView fx:id="tblStudent" layoutX="25.0" layoutY="361.0" prefHeight="225.0" prefWidth="653.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="S_ID" />
-          <TableColumn prefWidth="130.0" text="Name" />
-            <TableColumn prefWidth="135.0" text="Address" />
-            <TableColumn prefWidth="113.0" text="Contact" />
-            <TableColumn prefWidth="99.0" text="DOB" />
-            <TableColumn prefWidth="100.0" text="Gender" />
+          <TableColumn fx:id="colStudentId" prefWidth="75.0" text="S_ID" />
+          <TableColumn fx:id="colStudentName" prefWidth="130.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="135.0" text="Address" />
+            <TableColumn fx:id="colContactNo" prefWidth="113.0" text="Contact" />
+            <TableColumn fx:id="colDob" prefWidth="99.0" text="DOB" />
+            <TableColumn fx:id="colGender" prefWidth="100.0" text="Gender" />
         </columns>
       </TableView>
       <JFXDatePicker layoutX="385.0" layoutY="185.0" prefHeight="25.0" prefWidth="253.0" />

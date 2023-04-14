@@ -3,6 +3,8 @@ package lk.ijse.gdse.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class ManageStudentController {
     public JFXTextField txtStudentID;
@@ -15,6 +17,13 @@ public class ManageStudentController {
     public JFXButton btnUpdateStudent;
     public JFXButton btnClearStudent;
     public JFXButton btnDeleteStudent;
+    public TableView tblStudent;
+    public TableColumn colStudentId;
+    public TableColumn colStudentName;
+    public TableColumn colAddress;
+    public TableColumn colContactNo;
+    public TableColumn colDob;
+    public TableColumn colGender;
 
     public void SearchStudentOnAction(ActionEvent actionEvent) {
     }

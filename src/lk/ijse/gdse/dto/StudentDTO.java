@@ -1,5 +1,9 @@
 package lk.ijse.gdse.dto;
 
+
+
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
 import lombok.*;
 
 import java.util.Date;
