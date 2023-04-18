@@ -37,6 +37,11 @@ public class ManageRoomFormController implements Initializable {
 
     RoomServiceImpl roomService = new RoomServiceImpl();
     public void SearchRoomOnAction(ActionEvent event) {
+        RoomsDTO search = roomService.search(txtRoomId.getText());
+        txtRoomId.setText(search.getRoom_type_id());
+        txtType.setText(search.getType());
+//        txtKeyMoney.setText(search.getKey_money());
+//        txtRoomQty.setText(search.getQty());
 
     }
 
@@ -68,6 +73,7 @@ public class ManageRoomFormController implements Initializable {
     }
 
     public void UpdateRoomOnAction(ActionEvent event) {
+
     }
 
     public void DeleteRoomOnAction(ActionEvent event) {

@@ -32,6 +32,17 @@ public class RoomsDAOImpl {
         return true;
     }
 
+    public Rooms search(String Room_Type_Id) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Rooms rooms = session.get(Rooms.class, Room_Type_Id);
+
+        transaction.commit();
+        session.close();
+        return rooms;
+    }
+
     public List<Rooms> getAll() {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

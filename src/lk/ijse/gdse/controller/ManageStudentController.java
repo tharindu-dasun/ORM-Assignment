@@ -63,8 +63,11 @@ public class ManageStudentController implements Initializable {
     public void SearchStudentOnAction(ActionEvent actionEvent) {
         StudentDTO search = studentService.search(txtStudentID.getText());
         txtStudentID.setText(search.getStudent_id());
+        txtName.setText(search.getName());
+        txtAddress.setText(search.getAddress());
         txtCountact.setText(search.getContact_no());
-
+//        datePickerDob.setValue(search.getDob());
+        gender.setUserData(search.getGender());
     }
 
     public void SaveStudentOnAction(ActionEvent actionEvent)  {
