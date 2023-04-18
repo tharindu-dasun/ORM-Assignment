@@ -21,6 +21,11 @@ public class RoomServiceImpl {
         return true;
     }
 
+    public boolean delete(String id) throws Exception {
+        roomsDAO.delete(id);
+        return true;
+    }
+
     public List<Rooms> getAll() {
         return roomsDAO.getAll();
     }

@@ -20,6 +20,18 @@ public class RoomsDAOImpl {
         return true;
     }
 
+    public boolean delete(String id)throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Rooms rooms = session.get(Rooms.class, id);
+        session.delete(rooms);
+
+        transaction.commit();
+        session.close();
+        return true;
+    }
+
     public List<Rooms> getAll() {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

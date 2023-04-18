@@ -33,38 +33,30 @@ public class ManageStudentController implements Initializable {
     public JFXButton btnUpdateStudent;
     public JFXButton btnClearStudent;
     public JFXButton btnDeleteStudent;
-    public TableView tblStudent;
+    public TableView<Student> tblStudent;
     public TableColumn colStudentId;
     public TableColumn colStudentName;
     public TableColumn colAddress;
     public TableColumn colContactNo;
     public TableColumn colDob;
     public TableColumn colGender;
-    public JFXTextField txtType;
-    public JFXTextField txtKeyMoney;
-    public JFXTextField txtRoomQty;
-    public JFXTextField txtRoomId;
-    public TableColumn colRoomId;
-    public TableColumn colType;
-    public TableColumn colKeyMoney;
-    public TableColumn colRoomQty;
     public JFXDatePicker datePickerDob;
     public JFXRadioButton radioBtnFemale;
     public JFXRadioButton radioBtnMale;
     public ToggleGroup gender;
 
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        try {
-            getAll();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        setValueCell();
-
-    }
+//    @Override
+//    public void initialize(URL location, ResourceBundle resources) {
+////        try {
+////            getAll();
+////        } catch (Exception e) {
+////            throw new RuntimeException(e);
+////        }
+////
+////        setValueCell();
+//
+//    }
 
     StudentServiceImpl studentService = new StudentServiceImpl();
 
@@ -113,7 +105,7 @@ public class ManageStudentController implements Initializable {
 
     public void UpdateStudentOnAction(ActionEvent actionEvent) {
         if (datePickerDob.getValue() == null){
-            System.out.println("AAAAAA");
+//            System.out.println("AAAAAA");
         }
 
         String gender;
@@ -179,7 +171,20 @@ public class ManageStudentController implements Initializable {
 
     public void setValueCell(){
         colStudentId.setCellValueFactory(new PropertyValueFactory<>("student_id"));
-
+        colStudentName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colContactNo.setCellValueFactory(new PropertyValueFactory<>("contact_no"));
+        colDob.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            getAll();
+            setValueCell();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
