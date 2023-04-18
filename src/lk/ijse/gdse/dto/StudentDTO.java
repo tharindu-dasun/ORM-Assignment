@@ -4,6 +4,8 @@ package lk.ijse.gdse.dto;
 import lombok.*;
 
 import java.util.Date;
+
+
 @NoArgsConstructor
 @Getter
 @Setter
@@ -11,6 +13,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 public class StudentDTO {
+
     private String student_id;
     private String name;
     private String address;

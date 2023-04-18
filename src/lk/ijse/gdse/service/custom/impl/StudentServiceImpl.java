@@ -7,11 +7,17 @@ import lk.ijse.gdse.entity.Student;
 import java.util.List;
 
 public class StudentServiceImpl {
+
     StudentDAOImpl studentDAO = new StudentDAOImpl();
 
     public boolean save(StudentDTO studentDTO) throws Exception {
-        studentDAO.save(new Student(studentDTO.getStudent_id(),studentDTO.getName(),studentDTO.getAddress(),
-                studentDTO.getContact_no(),studentDTO.getDob(),studentDTO.getGender()
+        studentDAO.save(new Student(
+                studentDTO.getStudent_id(),
+                studentDTO.getName(),
+                studentDTO.getAddress(),
+                studentDTO.getContact_no(),
+                studentDTO.getDob(),
+                studentDTO.getGender()
         ));
 
         return true;
@@ -43,4 +49,5 @@ public class StudentServiceImpl {
     public List<Student> getAll() throws Exception {
         return studentDAO.getAll();
     }
+
 }

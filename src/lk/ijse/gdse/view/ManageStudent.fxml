@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -83,8 +84,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXRadioButton layoutX="427.0" layoutY="272.0" text="Male" />
-      <JFXRadioButton layoutX="538.0" layoutY="272.0" text="Female" />
+      <JFXRadioButton fx:id="radioBtnMale" layoutX="427.0" layoutY="272.0" selected="true" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="radioBtnFemale" layoutX="538.0" layoutY="272.0" text="Female" toggleGroup="$gender" />
       <Label layoutX="383.0" layoutY="231.0" text="Gender :">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -100,6 +104,6 @@
             <TableColumn fx:id="colGender" prefWidth="100.0" text="Gender" />
         </columns>
       </TableView>
-      <JFXDatePicker layoutX="385.0" layoutY="185.0" prefHeight="25.0" prefWidth="253.0" />
+      <JFXDatePicker fx:id="datePickerDob" layoutX="385.0" layoutY="185.0" prefHeight="25.0" prefWidth="253.0" />
    </children>
 </AnchorPane>
