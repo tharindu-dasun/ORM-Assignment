@@ -2,9 +2,7 @@ package lk.ijse.gdse.service.custom.impl;
 
 import lk.ijse.gdse.dao.custom.impl.RoomsDAOImpl;
 import lk.ijse.gdse.dto.RoomsDTO;
-import lk.ijse.gdse.dto.StudentDTO;
 import lk.ijse.gdse.entity.Rooms;
-import lk.ijse.gdse.entity.Student;
 
 import java.util.List;
 
@@ -37,4 +35,20 @@ public class RoomServiceImpl {
 
         return new RoomsDTO(rooms.getRoom_type_id(),rooms.getType(),rooms.getKey_money(),rooms.getQty());
     }
+
+    public boolean update(RoomsDTO roomsDTO) {
+        roomsDTO.update(new Rooms(roomsDTO.getRoom_type_id(),roomsDTO.getType(),roomsDTO.getKey_money(),
+                roomsDTO.getQty()
+        ));
+        return true;
+    }
+
+//    public boolean update(RoomsDTO roomsDTO) throws Exception {
+//        roomsDTO.update(new Rooms(roomsDTO.getRoom_type_id(),roomsDTO.getType(),roomsDTO.getKey_money(),
+//                roomsDTO.getQty()
+//        ));
+//        return true;
+//    }
+
+
 }

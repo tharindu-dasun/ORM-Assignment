@@ -73,7 +73,23 @@ public class ManageRoomFormController implements Initializable {
     }
 
     public void UpdateRoomOnAction(ActionEvent event) {
+        String room_type_id = txtRoomId.getText();
+        String type = txtType.getText();
+        int key_money = Integer.parseInt(txtKeyMoney.getText());
+        int qty = Integer.parseInt(txtRoomQty.getText());
 
+
+        Rooms rooms = new Rooms(room_type_id, type , key_money , qty);
+        try {
+            boolean update = roomService.update(new RoomsDTO(room_type_id,type,key_money,qty));
+            if (update){
+                new Alert(Alert.AlertType.CONFIRMATION,"Rooms save success").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR, "Rooms can not save").show();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void DeleteRoomOnAction(ActionEvent event) {

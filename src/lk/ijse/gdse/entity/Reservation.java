@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.sql.Date;
 @NoArgsConstructor
 @Getter
@@ -16,7 +17,16 @@ public class Reservation {
     @Id
     private String res_id;
     private Date date;
-    private String student_id;
-    private String room_type_id;
+    @ManyToOne
+    private Student student_id;
+    @ManyToOne
+    private Rooms room_type_id;
     private String status;
+
+//    public Reservation(String reservationId, Student student, Rooms rooms, String status) {
+//        this.res_id = reservationId;
+//        this.student_id = student;
+//        this.room_type_id = rooms;
+//        this.status = status;
+//    }
 }

@@ -1,5 +1,6 @@
 package lk.ijse.gdse.dto;
 
+import lk.ijse.gdse.entity.Rooms;
 import lombok.*;
 
 @NoArgsConstructor
@@ -16,4 +17,6 @@ public class RoomsDTO {
     private int key_money;
     private int qty;
 
+    public void update(Rooms rooms) {
+    }
 }

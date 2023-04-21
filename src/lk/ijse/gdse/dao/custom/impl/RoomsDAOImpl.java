@@ -43,6 +43,28 @@ public class RoomsDAOImpl {
         return rooms;
     }
 
+//    public boolean update(Rooms rooms)throws Exception {
+//        Session session = FactoryConfiguration.getInstance().getSession();
+//        Transaction transaction = session.beginTransaction();
+//
+//        session.update(rooms);
+//
+//        transaction.commit();
+//        session.close();
+//        return true;
+//    }
+
+    public boolean update(Rooms rooms)throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.update(rooms);
+
+        transaction.commit();
+        session.close();
+        return true;
+    }
+
     public List<Rooms> getAll() {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
