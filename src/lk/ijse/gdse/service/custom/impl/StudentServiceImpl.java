@@ -3,10 +3,11 @@ package lk.ijse.gdse.service.custom.impl;
 import lk.ijse.gdse.dao.custom.impl.StudentDAOImpl;
 import lk.ijse.gdse.dto.StudentDTO;
 import lk.ijse.gdse.entity.Student;
+import lk.ijse.gdse.service.custom.StudentService;
 
 import java.util.List;
 
-public class StudentServiceImpl {
+public class StudentServiceImpl implements StudentService {
 
     StudentDAOImpl studentDAO = new StudentDAOImpl();
 

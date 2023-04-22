@@ -3,10 +3,11 @@ package lk.ijse.gdse.service.custom.impl;
 import lk.ijse.gdse.dao.custom.impl.RoomsDAOImpl;
 import lk.ijse.gdse.dto.RoomsDTO;
 import lk.ijse.gdse.entity.Rooms;
+import lk.ijse.gdse.service.custom.RoomService;
 
 import java.util.List;
 
-public class RoomServiceImpl {
+public class RoomServiceImpl implements RoomService {
 
     RoomsDAOImpl  roomsDAO = new RoomsDAOImpl();
 

@@ -1,5 +1,7 @@
 package lk.ijse.gdse.dto;
 
+import lk.ijse.gdse.entity.Rooms;
+import lk.ijse.gdse.entity.Student;
 import lombok.*;
 
 import java.sql.Date;
@@ -11,8 +13,8 @@ import java.sql.Date;
 @AllArgsConstructor
 public class ReservationDTO {
     private String res_id;
+    private Student student_id;
+    private Rooms room_type_id;
     private Date date;
-    private String student_id;
-    private String room_type_id;
     private String status;
 }

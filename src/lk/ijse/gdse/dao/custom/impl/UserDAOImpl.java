@@ -1,11 +1,12 @@
 package lk.ijse.gdse.dao.custom.impl;
 
+import lk.ijse.gdse.dao.custom.UserDao;
 import lk.ijse.gdse.entity.User;
 import lk.ijse.gdse.util.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class UserDAOImpl {
+public class UserDAOImpl implements UserDao {
     public boolean save(User user)throws Exception{
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

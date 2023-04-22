@@ -1,5 +1,6 @@
 package lk.ijse.gdse.dao.custom.impl;
 
+import lk.ijse.gdse.dao.custom.StudentDao;
 import lk.ijse.gdse.entity.Student;
 import lk.ijse.gdse.util.FactoryConfiguration;
 import org.hibernate.Session;
@@ -8,7 +9,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class StudentDAOImpl {
+public class StudentDAOImpl implements StudentDao {
     public boolean save(Student student)throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

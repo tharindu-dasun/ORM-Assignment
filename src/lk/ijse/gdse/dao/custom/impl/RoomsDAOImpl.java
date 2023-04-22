@@ -1,5 +1,6 @@
 package lk.ijse.gdse.dao.custom.impl;
 
+import lk.ijse.gdse.dao.custom.RoomDao;
 import lk.ijse.gdse.entity.Rooms;
 import lk.ijse.gdse.util.FactoryConfiguration;
 import org.hibernate.Session;
@@ -8,7 +9,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class RoomsDAOImpl {
+public class RoomsDAOImpl implements RoomDao {
     public boolean save(Rooms rooms) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

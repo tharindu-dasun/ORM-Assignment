@@ -3,8 +3,9 @@ package lk.ijse.gdse.service.custom.impl;
 import lk.ijse.gdse.dao.custom.impl.UserDAOImpl;
 import lk.ijse.gdse.dto.UserDTO;
 import lk.ijse.gdse.entity.User;
+import lk.ijse.gdse.service.custom.UserService;
 
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
     UserDAOImpl userDAO = new UserDAOImpl();
 
     public boolean save(UserDTO userDTO) throws Exception {

@@ -16,11 +16,11 @@ import java.sql.Date;
 public class Reservation {
     @Id
     private String res_id;
-    private Date date;
     @ManyToOne
     private Student student_id;
     @ManyToOne
     private Rooms room_type_id;
+    private Date date;
     private String status;
 
 //    public Reservation(String reservationId, Student student, Rooms rooms, String status) {
